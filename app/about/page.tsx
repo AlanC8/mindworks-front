@@ -47,7 +47,7 @@ const About = () => {
             <strong className="text-blue-900">Aiganim Tyshkanbaeva</strong>. We
             are proud semi-finalists of the Technovation competition and are
             developing our startup aimed at dementia prevention. Our goal is to
-            make a meaningful contribution to improving people's quality of
+            make a meaningful contribution to improving people&#39;s quality of
             life, and we are actively working towards this goal.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed mt-4">
