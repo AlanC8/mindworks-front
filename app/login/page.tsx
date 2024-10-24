@@ -72,7 +72,7 @@ const LoginPage: React.FC = () => {
               Login
             </button>
             <p onClick={() => router.push("/login")} className="text-sm mt-2">
-              You don't have an account?{" "}
+              You dont have an account?
               <span className="underline">Sign up</span>
             </p>
           </div>

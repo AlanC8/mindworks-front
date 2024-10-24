@@ -5,77 +5,74 @@ const About = () => {
     <div className="min-h-screen bg-gradient-to-r from-blue-50 to-blue-100 p-8">
       <div className="max-w-5xl mx-auto rounded-xl py-10">
         <h1 className="text-4xl font-bold text-center text-blue-900 mb-8">
-          About MindWorks
+        О MindWorks
         </h1>
 
         <section className="mb-12">
           <h2 className="text-3xl font-semibold text-blue-800 mb-4">
-            What is MindWorks?
+          Что такое MindWorks?
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            <strong className="text-blue-900">MindWorks</strong> is our startup
-            focused on the prevention of dementia. Our project centers around a
-            web application that helps users assess their cognitive abilities
-            through a special test and offers a variety of brain training
-            exercises. However,{" "}
-            <strong className="text-blue-900">MindWorks</strong> is more than
-            just an application. Our project also emphasizes creating a
-            community because we believe that social life plays a key role in
-            maintaining brain health.
+          <strong className="text-blue-900">MindWorks</strong> - это наш стартап,
+            направленный на профилактику деменции. Наш проект построен вокруг
+            веб-приложения, которое помогает пользователям оценить свои когнитивные
+            способности через специальный тест и предлагает различные упражнения
+            для тренировки мозга. Тем не менее,{" "}
+            <strong className="text-blue-900">MindWorks</strong> - это больше, чем
+            просто приложение. Наш проект также делает акцент на создании
+            сообщества, потому что мы верим, что социальная жизнь играет ключевую
+            роль в поддержании здоровья мозга.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed mt-4">
-            Dementia is a pressing issue, and we aim to contribute to its
-            solution. Our startup has already been recognized by winning several
-            competitions, and we are determined to continue its development. We
-            are actively growing our social media presence, where we share
-            valuable information and stay connected with our community.{" "}
-            <strong className="text-blue-900">MindWorks</strong> is not just
-            about an app, but about creating an environment where everyone can
-            care for their cognitive health.
+            Деменция является актуальной проблемой, и мы стремимся внести свой
+            вклад в её решение. Наш стартап уже получил признание, выиграв
+            несколько конкурсов, и мы полны решимости продолжать его развитие. Мы
+            активно развиваем наше присутствие в социальных сетях, где делимся
+            полезной информацией и поддерживаем связь с нашим сообществом.{" "}
+            <strong className="text-blue-900">MindWorks</strong> - это не просто
+            приложение, а создание среды, где каждый может заботиться о своём
+            когнитивном здоровье.
           </p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-semibold text-blue-800 mb-4">
-            About Us
+        <h2 className="text-3xl font-semibold text-blue-800 mb-4">
+            О Нас
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            We are the{" "}
-            <strong className="text-blue-900">SheCodes Impact</strong> team,
-            consisting of{" "}
-            <strong className="text-blue-900">Ameli Arzykulova</strong> and{" "}
-            <strong className="text-blue-900">Aiganim Tyshkanbaeva</strong>. We
-            are proud semi-finalists of the Technovation competition and are
-            developing our startup aimed at dementia prevention. Our goal is to
-            make a meaningful contribution to improving people's quality of
-            life, and we are actively working towards this goal.
+            Мы команда{" "}
+            <strong className="text-blue-900">SheCodes Impact</strong>, в составе{" "}
+            <strong className="text-blue-900">Амели Арзыкуловой</strong> и{" "}
+            <strong className="text-blue-900">Айганым Тышканбаевой</strong>. Мы
+            являемся полуфиналистами конкурса Technovation и развиваем наш стартап,
+            направленный на профилактику деменции. Наша цель - внести значимый
+            вклад в улучшение качества жизни людей, и мы активно работаем над этим.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed mt-4">
-            Our journey has been marked not only by achievements in developing
-            innovative solutions but also by victories in prestigious
-            business-engineering incubators such as MOST BI and Satbayev
-            University. We believe in the power of knowledge and communication,
-            which is why we actively maintain our social networks where we share
-            useful information, and conduct offline sessions and training to
-            raise awareness about dementia.
+            Наш путь отмечен не только достижениями в разработке инновационных
+            решений, но и победами в престижных бизнес-инженерных инкубаторах,
+            таких как MOST BI и Университет Сатпаева. Мы верим в силу знаний и
+            общения, поэтому активно ведём наши социальные сети, где делимся
+            полезной информацией, проводим офлайн-сессии и тренинги для повышения
+            осведомленности о деменции.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed mt-4">
-            We are continuously developing our project, participating in various
-            competitions, and collaborating with partners to conduct tests and
-            research. Despite our journey just beginning, we have already
-            achieved significant success: Ameli has already graduated from
-            school, while Aiganim, being in the 11th grade, continues to balance
-            her studies with the development of our startup.
+            Мы постоянно развиваем наш проект, участвуем в различных конкурсах и
+            сотрудничаем с партнерами для проведения тестов и исследований.
+            Несмотря на то, что наш путь только начинается, мы уже достигли
+            значительных успехов: Амели уже окончила школу, в то время как Айганым,
+            будучи в 11 классе, продолжает совмещать учёбу с развитием нашего
+            стартапа.
           </p>
         </section>
 
         <section className="text-center mt-10">
-          <h3 className="text-2xl font-semibold text-blue-800">
-            Join Us on Our Journey!
+        <h3 className="text-2xl font-semibold text-blue-800">
+            Присоединяйтесь к нам в нашем путешествии!
           </h3>
           <p className="text-lg text-gray-700 mt-4">
-            Follow us on our social media channels and be a part of our
-            community dedicated to cognitive health and innovation.
+            Подписывайтесь на наши социальные сети и станьте частью нашего
+            сообщества, посвященного когнитивному здоровью и инновациям.
           </p>
           <div className="mt-6 flex justify-center space-x-4">
             <a
