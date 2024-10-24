@@ -33,7 +33,7 @@ const TestPage: React.FC<TestPageProps> = ({
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/api/v1/get-test");
+        const response = await axios.get("https://mindworks-back-production-86bc.up.railway.app/api/v1/get-test");
         setQuestions(response.data);
       } catch (error) {
         console.error("Failed to fetch questions:", error);
