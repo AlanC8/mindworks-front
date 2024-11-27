@@ -32,6 +32,15 @@ const gamesData: Game[] = [
     popularity: 4.7,
     releaseDate: "2022-12-20",
   },
+  {
+    id: "simonsays",
+    name: "Simon Says",
+    description: "Test your memory by repeating the color sequence",
+    image: "/simon.webp",
+    difficulty: "Medium",
+    popularity: 4.2,
+    releaseDate: "2023-11-27",
+  },
 ];
 
 const TrainingPage: React.FC = () => {

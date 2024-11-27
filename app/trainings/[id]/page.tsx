@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import MemGame from "@/app/components/MemGame";
 import Sudoku from "@/app/components/Sudoku";
+import SimonSays from "@/app/components/SimonSays";
 
 const TrainingDetailPage: React.FC = () => {
   const params = useParams();
@@ -14,6 +15,10 @@ const TrainingDetailPage: React.FC = () => {
 
   if(params.id === "sudoku") {
     return <Sudoku/>
+  }
+
+  if(params.id === "simonsays") {
+    return <SimonSays />
   }
 
   return <div>page {params.id}</div>;

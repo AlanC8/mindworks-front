@@ -2,8 +2,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import LastPage from "./LastPage";
+import { testData } from "./TestDTO";
 
-interface Question {
+export interface Question {
   _id: string;
   questions: string;
   options: string[];
@@ -33,8 +34,9 @@ const TestPage: React.FC<TestPageProps> = ({
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get("https://mindworks-back-production-86bc.up.railway.app/api/v1/get-test");
-        setQuestions(response.data);
+        // const response = await axios.get("https://mindworks-back-production-86bc.up.railway.app/api/v1/get-test");
+
+        setQuestions(testData);
       } catch (error) {
         console.error("Failed to fetch questions:", error);
       } finally {

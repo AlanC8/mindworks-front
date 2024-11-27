@@ -3,13 +3,16 @@ import React from 'react';
 
 const LastPage: React.FC = () => {
     const router = useRouter()
+    const getRandomNumber = () => {
+      return Math.floor(Math.random() * (10 - 6 + 1)) + 6;
+    }
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-b from-white to-purple-200 p-6">
       <div className="text-center">
         <p className="text-lg font-medium text-gray-800 mb-4">
           Ваша память была оценена на
         </p>
-        <p className="text-5xl font-bold text-gray-800 mb-6">6 из 10</p>
+        <p className="text-5xl font-bold text-gray-800 mb-6">{getRandomNumber()} из 10</p>
         <p className="text-lg font-medium text-gray-800 mb-8">
           Перейдите к вашему личному плану обучения
         </p>
