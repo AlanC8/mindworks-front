@@ -1,12 +1,22 @@
 "use client";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./components/Header";
 
 export default function Home() {
   const router = useRouter();
+
+  useEffect(() => {
+    const user = localStorage.getItem("access");
+    if (user) {
+      router.push("/login");
+    }
+  })
+
   return (
-    <div className="h-screen-full overflow-y-hidden">
+    <div className="">
+
+<div className="h-screen-full overflow-y-hidden">
       <div className="relative w-[90%] mx-auto py-2 z-20">
         <Header />
       </div>
@@ -39,6 +49,7 @@ export default function Home() {
          </button>
        </div>
       </div>
+    </div>
     </div>
   );
 }

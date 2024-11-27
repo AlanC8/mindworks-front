@@ -10,18 +10,18 @@ const RegistrationPage: React.FC = () => {
     username: "",
     password: "",
     age: "",
-    gender: "Male",
-    education: "High",
+    gender: "Мужской",
+    education: "Среднее",
     work: "",
   });
 
-  const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null); // Состояние для ошибки
+  const [success, setSuccess] = useState<boolean>(false); // Состояние успешной регистрации
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value }); // Обновление данных формы
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -32,19 +32,19 @@ const RegistrationPage: React.FC = () => {
         formData
       );
       if (response.status === 201) {
-        setSuccess(true);
+        setSuccess(true); // Регистрация успешна
         const resp = await axios.post("http://localhost:3001/api/v1/login", {
           email: formData.email,
           password: formData.password,
         });
         if (resp.status === 200) {
-          localStorage.setItem("access", resp.data.accessToken);
-          router.push("/");
+          localStorage.setItem("access", resp.data.accessToken); // Сохранение токена
+          router.push("/"); // Перенаправление на главную страницу
         }
       }
-      setError(null);
+      setError(null); // Очистка ошибок
     } catch (err) {
-      setError("Registration failed. Please try again.");
+      setError("Регистрация не удалась. Пожалуйста, попробуйте снова."); // Установка ошибки
       setSuccess(false);
     }
   };
@@ -53,12 +53,12 @@ const RegistrationPage: React.FC = () => {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-blue-100">
       <div className="bg-white p-6 rounded-xl shadow-lg max-w-sm w-full">
         <h2 className="text-xl font-semibold text-gray-800 mb-6 text-center">
-          Register
+          Регистрация
         </h2>
         {error && <div className="text-red-600 mb-4 text-center">{error}</div>}
         {success && (
           <div className="text-green-600 mb-4 text-center">
-            Registration successful!
+            Регистрация прошла успешно!
           </div>
         )}
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -71,11 +71,11 @@ const RegistrationPage: React.FC = () => {
               onChange={handleChange}
               required
               className="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your email"
+              placeholder="Введите ваш email"
             />
           </div>
           <div>
-            <label className="block text-gray-700">Username</label>
+            <label className="block text-gray-700">Имя пользователя</label>
             <input
               type="text"
               name="username"
@@ -83,11 +83,11 @@ const RegistrationPage: React.FC = () => {
               onChange={handleChange}
               required
               className="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your username"
+              placeholder="Введите ваше имя пользователя"
             />
           </div>
           <div>
-            <label className="block text-gray-700">Password</label>
+            <label className="block text-gray-700">Пароль</label>
             <input
               type="password"
               name="password"
@@ -95,12 +95,12 @@ const RegistrationPage: React.FC = () => {
               onChange={handleChange}
               required
               className="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your password"
+              placeholder="Введите ваш пароль"
             />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-gray-700">Age</label>
+              <label className="block text-gray-700">Возраст</label>
               <input
                 type="number"
                 name="age"
@@ -108,11 +108,11 @@ const RegistrationPage: React.FC = () => {
                 onChange={handleChange}
                 required
                 className="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Age"
+                placeholder="Возраст"
               />
             </div>
             <div>
-              <label className="block text-gray-700">Gender</label>
+              <label className="block text-gray-700">Пол</label>
               <select
                 name="gender"
                 value={formData.gender}
@@ -120,15 +120,15 @@ const RegistrationPage: React.FC = () => {
                 required
                 className="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
+                <option value="Мужской">Мужской</option>
+                <option value="Женский">Женский</option>
+                <option value="Другой">Другой</option>
               </select>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-gray-700">Education</label>
+              <label className="block text-gray-700">Образование</label>
               <select
                 name="education"
                 value={formData.education}
@@ -136,14 +136,14 @@ const RegistrationPage: React.FC = () => {
                 required
                 className="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                <option value="High">High</option>
-                <option value="Bachelor">Bachelor</option>
-                <option value="Master">Master</option>
-                <option value="PhD">PhD</option>
+                <option value="Среднее">Среднее</option>
+                <option value="Бакалавр">Бакалавр</option>
+                <option value="Магистр">Магистр</option>
+                <option value="Кандидат наук">Кандидат наук</option>
               </select>
             </div>
             <div>
-              <label className="block text-gray-700">Work</label>
+              <label className="block text-gray-700">Работа</label>
               <input
                 type="text"
                 name="work"
@@ -151,7 +151,7 @@ const RegistrationPage: React.FC = () => {
                 onChange={handleChange}
                 required
                 className="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Work status"
+                placeholder="Статус работы"
               />
             </div>
           </div>
@@ -160,9 +160,11 @@ const RegistrationPage: React.FC = () => {
               type="submit"
               className="bg-blue-500 w-full text-white py-3 px-6 rounded-full hover:bg-blue-600 transition"
             >
-              Register
+              Зарегистрироваться
             </button>
-            <p onClick={() => router.push("/login")} className="text-sm mt-2">Already registered? <span className="underline">Sign in</span></p>
+            <p onClick={() => router.push("/login")} className="text-sm mt-2">
+              Уже зарегистрированы? <span className="underline">Войти</span>
+            </p>
           </div>
         </form>
       </div>

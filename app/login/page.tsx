@@ -33,12 +33,12 @@ const LoginPage: React.FC = () => {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-blue-100">
       <div className="bg-white p-6 rounded-xl shadow-lg max-w-sm w-full">
         <h2 className="text-xl font-semibold text-gray-800 mb-6 text-center">
-          Login
+          Вход
         </h2>
         {error && <div className="text-red-600 mb-4 text-center">{error}</div>}
         {success && (
           <div className="text-green-600 mb-4 text-center">
-            Login successful!
+            Вход выполнен успешно!
           </div>
         )}
         <form onSubmit={handleLogin} className="space-y-4">
@@ -50,18 +50,18 @@ const LoginPage: React.FC = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
               className="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your email"
+              placeholder="Введите ваш email"
             />
           </div>
           <div>
-            <label className="block text-gray-700">Password</label>
+            <label className="block text-gray-700">Пароль</label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
               className="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your password"
+              placeholder="Введите ваш пароль"
             />
           </div>
           <div className="text-center mt-6">
@@ -69,11 +69,11 @@ const LoginPage: React.FC = () => {
               type="submit"
               className="bg-blue-500 w-full text-white py-3 px-6 rounded-full hover:bg-blue-600 transition"
             >
-              Login
+              Войти
             </button>
-            <p onClick={() => router.push("/login")} className="text-sm mt-2">
-              You dont have an account?
-              <span className="underline">Sign up</span>
+            <p onClick={() => router.push("/register")} className="text-sm mt-2">
+              У вас нет аккаунта?
+              <span className="underline">Зарегистрируйтесь</span>
             </p>
           </div>
         </form>
