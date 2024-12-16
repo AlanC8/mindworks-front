@@ -28,12 +28,12 @@ const RegistrationPage: React.FC = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/v1/register",
+        "https://mindworks-back-production-5d00.up.railway.app/api/v1/register",
         formData
       );
       if (response.status === 201) {
         setSuccess(true); // Регистрация успешна
-        const resp = await axios.post("http://localhost:3001/api/v1/login", {
+        const resp = await axios.post("https://mindworks-back-production-5d00.up.railway.app/api/v1/login", {
           email: formData.email,
           password: formData.password,
         });

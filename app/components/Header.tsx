@@ -19,7 +19,7 @@ const Header: React.FC = () => {
         const token = localStorage.getItem("access");
         if (token) {
           const response = await axios.get(
-            "http://localhost:3001/api/v1/auth/me",
+            "https://mindworks-back-production-5d00.up.railway.app/api/v1/auth/me",
             {
               headers: {
                 Authorization: `Bearer ${token}`,

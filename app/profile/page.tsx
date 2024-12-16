@@ -15,7 +15,7 @@ const Profile = () => {
       try {
         const token = localStorage.getItem("access");
         if (token) {
-          const response = await axios.get("http://localhost:3001/api/v1/auth/me", {
+          const response = await axios.get("https://mindworks-back-production-5d00.up.railway.app/api/v1/auth/me", {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -39,7 +39,7 @@ const Profile = () => {
     try {
       const token = localStorage.getItem("access");
       if (token) {
-        const response = await axios.put("http://localhost:3001/api/v1/auth/update", userData, {
+        const response = await axios.put("https://mindworks-back-production-5d00.up.railway.app/api/v1/auth/update", userData, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

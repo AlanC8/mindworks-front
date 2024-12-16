@@ -34,7 +34,7 @@ const TestPage: React.FC<TestPageProps> = ({
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        // const response = await axios.get("https://mindworks-back-production-86bc.up.railway.app/api/v1/get-test");
+        const response = await axios.get("https://mindworks-back-production-5d00.up.railway.app/api/v1/get-test");
 
         setQuestions(testData);
       } catch (error) {

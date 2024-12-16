@@ -8,7 +8,7 @@ export default function Home() {
 
   useEffect(() => {
     const user = localStorage.getItem("access");
-    if (user) {
+    if (!user) {
       router.push("/login");
     }
   })

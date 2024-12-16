@@ -13,7 +13,7 @@ const LoginPage: React.FC = () => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3001/api/v1/login", {
+      const response = await axios.post("https://mindworks-back-production-5d00.up.railway.app/api/v1/login", {
         email,
         password,
       });
